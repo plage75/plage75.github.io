@@ -4,6 +4,7 @@ $(document).ready(function() {
 $(".toggle-mnu").click(function() {
 	$(this).toggleClass("on");
 	$(".main-mnu").slideToggle();
+	return false;
 });
 
 	//SVG Fallback
@@ -15,21 +16,21 @@ $(".toggle-mnu").click(function() {
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
+	$(".forms").submit(function() {
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
+			url: "mail.php",
+			data: $(this).serialize()
 		}).done(function() {
-			alert("Thank you!");
+			alert("Спасибо за заявку!");
 			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
+				$.magnificPopup.close();
+				$(".forms").trigger("reset");
 			}, 1000);
 		});
 		return false;
 	});
+
 
 	//Chrome Smooth Scroll
 	try {
