@@ -1,5 +1,5 @@
 @import "bourbon"
-// @import _vars.sass
+
 $main-color: #f39f18
 $headers-color: #458127
 
@@ -11,6 +11,7 @@ body
 	font-family: "RalewayRegular", sans-serif
 	overflow-x: hidden
 	color: #fff
+
 	
 .hidden
 	display: none
@@ -62,12 +63,15 @@ a, a:hover, a:focus, a:active
 	background-size: cover 
 	background-position: center
 	position: relative
+	padding-bottom: 120px 
 	&::before
 		@extend .before
 		background-color: #3a7a15
 		opacity: .34 
 	h1
 		text-transform: none
+		line-height: em(18px) 
+		
 		
 .top-line
 	padding-top: 45px 
@@ -107,7 +111,7 @@ a, a:hover, a:focus, a:active
 		color: #FFF
 		font-family: "RobotoBold", $helvetica
 		font-size: em(18px)  
-		text-align: left
+		text-align: right
 		//white-space: nowrap // перенос строки
 	.toggle-mnu
 		display: block 
@@ -166,11 +170,11 @@ a, a:hover, a:focus, a:active
 		margin-top: 40px
 		h1
 			margin-top: 120px
-			color: #FFF 
+			color: #fff 
 			border-bottom: #f39f18 8px solid
 			display: inline-block 
 			padding-bottom: 15px 
-			font-size: 18px
+			font-size: 21px
 		ul
 			margin-top: 10px 
 			@extend .ulmnu
@@ -197,7 +201,7 @@ a, a:hover, a:focus, a:active
 						text-decoration: underline
 						
 .header-left
-		margin-bottom: 40px 
+	margin-bottom: 40px 
 		
 .forms
 		background-color: transparentize(#294d17, .3)
@@ -222,7 +226,7 @@ a, a:hover, a:focus, a:active
 			letter-spacing: 1.5px
 			display: block
 			margin-bottom: 6px
-			color: #FFF 
+			color: #fff 
 		input
 			display: block
 			width: 100%
@@ -232,18 +236,35 @@ a, a:hover, a:focus, a:active
 			text-indent: 10px
 			padding: 5px 0px
 			transition: all .5s ease
+			color: #FFF
+			font-family: "PFCentroSlabProMedium", $helvetica
+			font-size: em(20px)
 			&:focus
 				box-shadow: 0 -7px 
 
 .button-wrap
 	text-align: center
-		#13240b
+	color:#13240b
 .buttons
 	display: inline-block
 	border: none
-
-
-		
-
-		
+	background-color: #f39f18
+	color: #111
+	font-family: "PFCentroSlabProBold", $helvetica
+	
+.arrow-wrap
+	@extend .button-wrap
+	position: relative
+	z-index: 2
+	top: 60px
+.arrow-button
+	display: inline-block
+	width: 40px
+	height: 40px
+	background-image: url(img/arrow_down.png) 
+	cursor: pointer
+	opacity: .7
+	transition: all .25s ease
+	&:hover
+		opacity: 1  
 	
