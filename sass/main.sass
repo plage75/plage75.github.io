@@ -1,5 +1,6 @@
 @import "bourbon"
-//@import vars.sass
+@import vars.sass
+
 
 *::-webkit-input-placeholder
 	color: #fff
@@ -25,6 +26,37 @@ body textarea:required:valid
 	color: #13240b
 
 //Custom Styles Here
+.homesect
+	padding-top: 70px 
+	// цвет бэка секции
+	background-color: #f9f9f9
+	.section-head
+		margin-bottom: 85px
+		p
+			color: #111
+			margin-top: 60px
+		h2
+			text-align: center
+			position: relative
+			// цвет шрифта секции
+			color: #111 
+			// Полоска под h2
+			&::after
+				position: absolute
+				content: ''
+				height: 4px
+				background-color: $main-color
+				width: 165px
+				display: block
+				bottom: -30px
+				left: 50%  
+				transform: translate(-50%, 0)
+
+.section-bottom
+	margin-top: 70px
+	background-color: #e5e5e5
+	padding: 50px 0
+	text-align: center
 
 
 //ALWAYS END

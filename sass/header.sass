@@ -1,7 +1,5 @@
 @import "bourbon"
-
-$main-color: #f39f18
-$headers-color: #458127
+@import vars.sass
 
 body
 	font-size: 15px
@@ -20,10 +18,11 @@ body
 	font-family: "PFCentroSlabProMedium", $helvetica
 	text-transform: uppercase
 	font-weight: normal
-	color: #f39f18
+	color: $main-color
 	
 h1, h2, h3, h4, h5
-	@extend .headers 	
+	@extend .headers 
+	line-height: em(22px)	
 	
 h1
 	font-size: em(18px)
@@ -36,9 +35,10 @@ h3
 	
 b, strong
 	font-family: "RalewayBold", $helvetica
+	font-weight: normal 
 	
 a, a:hover, a:focus, a:active
-	color: #f39f18
+	color: $main-color
 	text-decoration:none
 	
 .before
@@ -66,7 +66,7 @@ a, a:hover, a:focus, a:active
 	padding-bottom: 120px 
 	&::before
 		@extend .before
-		background-color: #3a7a15
+		background-color: $headers-color
 		opacity: .34 
 	h1
 		text-transform: none
@@ -93,10 +93,10 @@ a, a:hover, a:focus, a:active
 		padding: 0 10px
 		&.active
 			a
-				color: #f39f18
+				color: $main-color
 				text-decoration: underline 
 		a:hover
-				color: #f39f18
+				color: $main-color
 				text-decoration: underline
 	ul
 		@extend .ulmnu
@@ -171,7 +171,7 @@ a, a:hover, a:focus, a:active
 		h1
 			margin-top: 120px
 			color: #fff 
-			border-bottom: #f39f18 8px solid
+			border-bottom: $main-color 8px solid
 			display: inline-block 
 			padding-bottom: 15px 
 			font-size: 21px
@@ -190,7 +190,7 @@ a, a:hover, a:focus, a:active
 					display: block
 					width: 6px 
 					height: 11px
-					+triangle(12px, #f39f18, right)
+					+triangle(12px, $main-color, right)
 					position: absolute
 					top: 10px
 					left: 0  
@@ -248,9 +248,25 @@ a, a:hover, a:focus, a:active
 .buttons
 	display: inline-block
 	border: none
-	background-color: #f39f18
+	background-color: $main-color
 	color: #111
 	font-family: "PFCentroSlabProBold", $helvetica
+	font-size: em(22px)
+	padding: 12px 30px
+	border-bottom: #897200 3px solid
+	transition: all .25s ease
+	text-decoration: none
+	&:hover
+	 background-color: #FFB338
+	 text-decoration: none
+	 color: #111
+	&:active
+	 background-color: #D88C0E
+	 text-decoration: none
+	 color: #111
+	&:focus
+		color: #111
+		text-decoration: none
 	
 .arrow-wrap
 	@extend .button-wrap
@@ -266,5 +282,4 @@ a, a:hover, a:focus, a:active
 	opacity: .7
 	transition: all .25s ease
 	&:hover
-		opacity: 1  
-	
+		opacity: 1
