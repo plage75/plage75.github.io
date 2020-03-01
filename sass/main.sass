@@ -73,12 +73,21 @@ body textarea:required:valid
 		top: -6px
 		background-image: url(/img/bah_1.png) 
 
+.section_1
+	.section-content
+		background-image: url(/img/s1_gray_bg.png)
+		background-repeat: no-repeat
+		background-position: top
+	.section-bottom
+		background-color: #34601e
+
 .section-content
-	background-image: url(/img/s1_gray_bg.png)
-	background-repeat: no-repeat
-	background-position: bottom
 	position: relative
 	padding-bottom: 90px
+	.info-item-wrap
+		&:nth-child(4), &:last-child
+			.info-item
+				margin-bottom: 0
 
 	.s1-bottom-triangle
 		height: 90px
@@ -98,12 +107,23 @@ body textarea:required:valid
 .s1-bottom
 	padding: 15px 0 65px
 	background-color: #458127
+	.info-item
+		margin: 20px 0 0
+		p
+			color: #FFF
+			border-color: #FFF 
+			
+
+	.info-item-wrap:nth-child(2)
+		.info-item
+			margin-top: 54px
+
 
 .info-item
 	padding-left: 60px
-	max-width: 264px
+	max-width: 300px
 	line-height: em(18px)
-	margin: 70px 0
+	margin: 20px 0
 	h4
 		margin-top: 0
 		margin-bottom: 10px
@@ -115,7 +135,10 @@ body textarea:required:valid
 	p
 		color: #111
 		font-size: em(17px)
-	
+		border-bottom: #b3b1b3 1px solid
+		padding-bottom: 12px
+
+			
 .info-item-wrap:nth-child(2)
 	.info-item
 		margin-top: 0
