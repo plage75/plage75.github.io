@@ -30,11 +30,18 @@ body textarea:required:valid
 	padding-top: 70px 
 	// цвет бэка секции
 	background-color: #f9f9f9
+	position: relative
+	a
+		&:hover
+			text-decoration: none
 	.section-head
-		margin-bottom: 85px
+		margin-bottom: 60px
 		p
 			color: #111
 			margin-top: 60px
+			text-align: center
+			a
+				font-family: "RalewayBold", $helvetica 
 		h2
 			text-align: center
 			position: relative
@@ -52,12 +59,75 @@ body textarea:required:valid
 				left: 50%  
 				transform: translate(-50%, 0)
 
-.section-bottom
-	margin-top: 70px
-	background-color: #e5e5e5
-	padding: 50px 0
-	text-align: center
+	.section-bottom
+		// margin-top: 70px
+		background-color: #e5e5e5
+		padding: 50px 0
+		text-align: center
 
+	&::before
+		content: ''
+		height: 6px
+		width: 100%
+		position: absolute
+		top: -6px
+		background-image: url(/img/bah_1.png) 
+
+.section-content
+	background-image: url(/img/s1_gray_bg.png)
+	background-repeat: no-repeat
+	background-position: bottom
+	position: relative
+	padding-bottom: 90px
+
+	.s1-bottom-triangle
+		height: 90px
+		position: absolute
+		bottom: 0
+		background-image: url(/img/s1_triangle.svg)
+		z-index: 2
+		width: 100%
+		background-position: top
+		background-size: 100% 100%
+		text-align: center
+		.triangle-logo
+			width: 150px
+			margin-top: 20px
+			
+		
+.s1-bottom
+	padding: 15px 0 65px
+	background-color: #458127
+
+.info-item
+	padding-left: 60px
+	max-width: 264px
+	line-height: em(18px)
+	margin: 70px 0
+	h4
+		margin-top: 0
+		margin-bottom: 10px
+		a
+			font-size: em(24px)
+			line-height: em(13px) 
+			text-decoration: underline
+			text-transform: none
+	p
+		color: #111
+		font-size: em(17px)
+	
+.info-item-wrap:nth-child(2)
+	.info-item
+		margin-top: 0
+	
+.scales
+	width: 200px
+	position: absolute
+	top: -193px
+	left: 50%
+	transform: translate(-50%, 0)
+	z-index: -1 
+	
 
 //ALWAYS END
 @import media
